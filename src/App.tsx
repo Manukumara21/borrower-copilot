@@ -13,7 +13,7 @@ import { ExplainerModal } from './components/ExplainerModal';
 import { NegotiationCardModal } from './components/NegotiationCardModal';
 import { Questionnaire } from './components/Questionnaire';
 import { RulesViewer } from './components/RulesViewer';
-import { ArrowLeft, Edit3, Sparkles, Shield, RefreshCw } from 'lucide-react';
+import { Edit3, Sparkles } from 'lucide-react';
 
 const DEFAULT_ANSWERS: BorrowerInput = {
   purpose: 'personal_loan_unsecured' as any,
@@ -66,7 +66,7 @@ export const App: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      
+
       {/* Top Navigation */}
       <Header
         activePersonaId={activePersonaId}
@@ -79,7 +79,7 @@ export const App: React.FC = () => {
 
       {/* Main Container */}
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '32px 24px', flex: 1, width: '100%' }}>
-        
+
         {activeTab === 'rules' ? (
           <RulesViewer />
         ) : viewMode === 'questionnaire' ? (
@@ -107,7 +107,7 @@ export const App: React.FC = () => {
         ) : (
           /* Dashboard Results View */
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            
+
             {/* Top Persona Context Banner */}
             {activePersonaId && (
               <div

@@ -33,6 +33,7 @@ npx tsx src/rules/__tests__/testPersonas.ts
 
 - **[RULES.md](./RULES.md)**: Full decision rules matrix formatted in `What · Value · Why · Source` as required by the challenge.
 - **[PERSONAS.md](./PERSONAS.md)**: Full run-throughs and transcripts for **Priya**, **Ravi**, and **Anita** showing the 4 outputs, stress test, and negotiation cards.
+- **[WALKTHROUGH.md](./WALKTHROUGH.md)**: 5-minute explanation covering domain reasoning, architecture, trade-offs, what to build next, and what to cut.
 
 ---
 

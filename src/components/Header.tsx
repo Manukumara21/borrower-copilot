@@ -84,20 +84,28 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Navigation links & Action button */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+
             <button
-              onClick={() => setActiveTab(activeTab === 'app' ? 'rules' : 'app')}
-              className="btn-secondary"
-              style={{ fontSize: '0.8rem', padding: '7px 14px' }}
+              onClick={() => setActiveTab(activeTab === 'rules' ? 'app' : 'rules')}
+              className={`btn-secondary ${activeTab === 'rules' ? 'active' : ''}`}
+              style={{
+                fontSize: '0.8rem',
+                padding: '7px 12px',
+                background: activeTab === 'rules' ? 'rgba(99, 102, 241, 0.2)' : undefined,
+                borderColor: activeTab === 'rules' ? 'var(--accent-indigo)' : undefined,
+                color: activeTab === 'rules' ? '#fff' : undefined,
+              }}
+              title="Decision rules & thresholds matrix"
             >
               <FileText size={15} />
-              <span>{activeTab === 'app' ? 'View RULES.md' : 'Back to Copilot'}</span>
+              <span>{activeTab === 'rules' ? 'Back to Copilot' : 'RULES.md'}</span>
             </button>
 
             <button
               onClick={onOpenNegotiationCard}
               className="btn-primary"
-              style={{ fontSize: '0.8rem', padding: '8px 16px' }}
+              style={{ fontSize: '0.8rem', padding: '8px 14px' }}
             >
               <Sparkles size={15} />
               <span>Negotiation Card</span>
